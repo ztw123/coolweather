@@ -14,14 +14,14 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		
+		db.execSQL(CREATE_PROVINCE);
+		db.execSQL(CREATE_CITY);
+		db.execSQL(CREATE_COUNTY);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL(CREATE_PROVINCE);
-		db.execSQL(CREATE_CITY);
-		db.execSQL(CREATE_COUNTY);
+		
 	}
 	
 	/**
